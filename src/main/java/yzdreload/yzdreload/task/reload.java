@@ -41,9 +41,7 @@ public class reload extends BukkitRunnable {
         config.saveConfig();
         config.reloadConfig();
 
-        if(config.getConfig().getBoolean("have-reloaded")) return;
-            /*检测分钟*/
-        else if(formatter.format(date).equals("00")) //如果发现是整点
+        if(formatter.format(date).equals("00")&&!config.getConfig().getBoolean("have-reloaded")) //如果发现是整点
         {
             Bukkit.broadcastMessage("§7§l[§6重启系统§7§l] §r服务器正在重启");
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"qq say 服务器正在重启"); //q群提示
