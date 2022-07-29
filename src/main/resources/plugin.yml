@@ -1,0 +1,4 @@
+name: YzdReload
+version: '${project.version}'
+main: yzdreload.yzdreload.YzdReload
+api-version: 1.17
